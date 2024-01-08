@@ -20,7 +20,7 @@ print(pessoa[chave])
 # print(pessoa[chave])
 
 pessoa['sobrenome'] = 'Tavares'
-del pessoa['sobrenome']
+#del pessoa['sobrenome']
 
 if pessoa.get('sobrenome') is None:
     print('Não existe')
