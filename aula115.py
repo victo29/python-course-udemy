@@ -16,3 +16,4 @@
 # .\venv\Scripts\activate Ativa o ambiente virtual
 # pip intall "bliblioteca"
 # pip unintall "biblioteca" -y
+# pip install -r .\requirements.txt
