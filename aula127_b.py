@@ -1,21 +1,13 @@
 import json
-from aula127_a import Pessoa
+from aula127_a import Pessoa, CAMINHO_ARQUIVO, fazer_dump
 
-# class Pessoa:
-#     ano_atual = 2024
 
-#     def __init__(self, nome, idade):
-#         self.nome = nome
-#         self.idade = idade
+# CAMINHO_DO_ARQUIVO = 'aula127.json'
 
-# def recupera_atributos(caminho_do_arquivo):
-#     with open(caminho_do_arquivo,'r', encoding='utf8') as arquivo:
-#         pessoa = json.load(arquivo)
-#     return pessoa
+with open(CAMINHO_ARQUIVO, 'r') as arquivo:
+    dados = json.load(arquivo)
+    p1 = Pessoa(**dados[0])
+    p2 = Pessoa(**dados[1])
 
-CAMINHO_DO_ARQUIVO = 'aula127.json'
-atributos = Pessoa.recupera_atributos(CAMINHO_DO_ARQUIVO)
-pessoa1 = Pessoa(**atributos)
-
-print(pessoa1.nome)
-print(pessoa1.idade)
+print(p1.nome)
+print(p2.nome)
